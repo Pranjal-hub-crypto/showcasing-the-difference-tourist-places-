@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcasing casing The differentplace for tourist spot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(99, 105, 193);
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 20px;
+            margin: 30px;
+            background-color: rgb(174, 134, 134);
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            padding: 50px;
+        }
+        nav ul li a:hover {
+            color: rgb(215, 28, 11);
+        }
+        .sign.in, .Login {
+            padding: 10px 20px;
+            margin-left: 20%;
+            background-color: rgb(100, 150, 250);
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .image-row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        
+        .image-row img {
+            width: 300px;
+            height: 200px;       
+            object-fit: cover;   
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            background-color: rgb(31, 25, 25);
+        }
+
+        .image-row p {
+            text-align: center;
+            color: white;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <button class="sign in">Sign in</button>
+            <button class="Login">Login</button>
+        </ul>
+    </nav>
+
+    <h1 class="header">Showcasing the different tourist spots</h1>
+
+    <div class="image-row">
+        <div>
+            <img src="cloud image.jpeg" alt="image1">
+            <p>Cherrapunji, Meghalaya</p>
+        </div>
+
+        <div>
+            <img src="tumjangpeak.png" alt="image2">
+            <p>Tumjang Peak, Assam</p>
+        </div>
+
+        <div>
+            <img src="Dzukovalley.png" alt="image3">
+            <p>Dzuko Valley, Nagaland</p>
+        </div>
+    </div>
+
+    <script>
+        const signInBtn = document.querySelector(".sign.in");
+        signInBtn.addEventListener("click", () => {
+            alert("Sign In button clicked!");
+        });
+
+        const loginBtn = document.querySelector(".Login");
+        loginBtn.addEventListener("click", () => {
+            alert("Login button clicked!");
+        });
+
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault(); 
+                alert(`You clicked on: ${link.textContent}`);
+            });
+        });
+
+        const images = document.querySelectorAll(".image-row img");
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                alert(`You clicked on image: ${img.alt}`);
+            });
+        });
+    </script>
+
+</body>
+</html>
